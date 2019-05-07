@@ -1,0 +1,31 @@
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<div id=header>
+    
+    <div id="header1"> THE TODO CREATER</div>
+</div>
+<input type=text id=input placeholder="Enter ToDo" />
+<button onClick="func()" id=button1 > Enter </button>
+<table id=division >
+</table>
+<script>
+       var increment=0
+function func()
+{
+ 	var n1=document.getElementById("input")
+    var n2=document.getElementById("division")
+n2.innerHTML+="<tr class=hhh><td><b class=hider >"+n1.value+" </td><td style='background-color:red'><button class=button2 onClick='Delete("+increment+")'> DELETE <span class=hide>"+increment+" </span></button> </b></td></tr>"
+    increment=increment+1
+}
+function Delete(x)
+{
+    var n3=document.getElementsByClassName('hhh')
+    n3[x].style.display="none"
+}
+</script>
+<style>
+.hide{
+    display: none;
+}
+</style>
